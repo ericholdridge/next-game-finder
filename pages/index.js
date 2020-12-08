@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Nav from "../components/Nav/Nav";
-import { useDispatch, useSelector } from "react-redux";
-import { loadGames } from "../store/actions/gamesAction";
 import PopularGames from "../components/Games/PopularGames/PopularGames";
+import UpcomingGames from "../components/Games/UpcomingGames/UpcomingGames";
 
 const Home = () => {
   return (
-    <div className="index">
+    <div className="index bg-gray-50">
       <Head>
-        <title>Create Next App</title>
+        <title>Next Game Library</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <PopularGames />
+      <PopularGames heading="Popular Games"/>
+      <UpcomingGames heading="Upcoming Games"/>
     </div>
   );
 };
